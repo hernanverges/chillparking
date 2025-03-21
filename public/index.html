@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estacionamiento App</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Estilos -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> <!-- Hoja de estilos de Leaflet -->
+</head>
+<body>
+  <!-- Título -->
+  <h1>CHILL PARKING</h1>
+  <h2>Encontrá tu estacionamiento</h2>
+
+  <!-- Contenedor del mapa -->
+  <div id="map"></div>
+
+  <!-- Contenedor cartel no hay lugares -->
+  <div id="sinLugares" style="display:none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <img src="assets/sinlugares.png" alt="No hay lugares disponibles" />
+  </div>
+
+  <div id="errorDistancia">
+    <img src="assets/errordistancia.png" alt="Error: Debes moverte más lejos">
+  </div>
+
+  <!-- Contenedor de botones -->
+  <div class="botones-container">
+    <button id="buscarLugar">
+      <img src="assets/search.png" alt="Buscar lugar">
+    </button>
+    <button id="dejarLugar">
+      <img src="assets/leave.png" alt="Dejar lugar">
+    </button>
+  </div>
+
+
+  <img id="placesImage" src="assets/places.png" alt="Lugares encontrados" width: 100%; style="display: none;" />
+  
+
+  <!-- Interruptor de notificaciones -->
+<div class="notificacion-container">
+  <p>NOTIFICARME CUANDO SE LIBERE UN LUGAR CERCANO</p>
+  <div id="switch" class="switch">
+    <img id="switchImg" src="assets/switchoff.png" alt="Interruptor de notificación">
+  </div>
+</div>
+
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!-- Script de Leaflet -->
+  <script src="app.js"></script> <!-- Script de tu lógica -->
+</body>
+</html>
+
